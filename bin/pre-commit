@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'pre-commit/cli'
-
-if !File.exists?(".git")
-  abort "No .git directory found."
-end
-
-PreCommit::Cli.new(*ARGV).execute or exit 1
