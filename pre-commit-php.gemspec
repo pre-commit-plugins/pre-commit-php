@@ -15,6 +15,10 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["README.md"]
   s.files = Dir["lib/**/*"]
 
+  s.metadata = {
+    "plugins/pre_commit/checks/php.rb" => "1",
+  }
+
   s.add_dependency("pre-commit")#, "~> 0.20")
 
   s.add_development_dependency("guard", "~> 2.0")
