@@ -11,7 +11,6 @@ then
     ]
     command_name "Spesc Tests"
     add_filter "/test/"
-    #add_filter "/demo/"
   end
 
   Coveralls.noisy = true unless ENV['CI']
@@ -21,8 +20,6 @@ require 'minitest/autorun'
 require "minitest/reporters"
 require 'tmpdir'
 require 'pluginator'
-
-Minitest::Reporters.use!
 
 module PreCommit; module Helpers
 
@@ -40,3 +37,7 @@ end; end
 class MiniTest::Unit::TestCase
   include PreCommit::Helpers
 end
+
+Dir['lib/**/*.rb'].each { |file| require "./#{file}" } # coverals trick for all files
+
+Minitest::Reporters.use!
