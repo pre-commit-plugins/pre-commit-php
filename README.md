@@ -13,7 +13,6 @@ Install the plugin
 
     $ gem install pre-commit-php
 
-
 ### Enable as errors
 
 Use the pre-commit command to enable the plugin
@@ -24,13 +23,11 @@ Use the pre-commit command to enable the plugin
 This creates a `config/pre_commit.yml` configuratiuon file which will
 inform `pre-commit` to use `pre-commit-php` plugin for this project.
 
-
 ### Enable as warnings
 
 Use the pre-commit command to enable the plugin
 
     # In your git repo
     $ pre-commit enable yaml warnings php
-
 
 ## [Contributing](CONTRIBUTING.md)
